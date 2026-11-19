@@ -2,6 +2,14 @@
 
 两个可独立安装的非官方 MOD，面向 Windows 上的 Steam 抢先体验版（EA，App ID `3218350`），不适用于独立 Demo。
 
+## 下载
+
+- [下载简体中文汉化 v0.6.12](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/main/downloads/MelvorIdle2_EA_%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96_v0.6.12.zip)（324,835 字节）
+- [下载加速 MOD v0.3.11 · EA 离线调试版](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/main/downloads/MelvorIdle2_%E5%8A%A0%E9%80%9FMod_v0.3.11_EA%E7%A6%BB%E7%BA%BF%E8%B0%83%E8%AF%95%E7%89%88.zip)（2,324,317 字节）
+- [SHA-256 校验值](downloads/SHA256SUMS.txt) · 在 PowerShell 中用 `Get-FileHash -Algorithm SHA256 -LiteralPath '压缩包完整路径'` 核对。
+
+请选择对应的 MOD ZIP，不要把 GitHub 的仓库源码压缩包当作安装包。
+
 ## 版本与用途
 
 | MOD | 版本 | 功能 |
