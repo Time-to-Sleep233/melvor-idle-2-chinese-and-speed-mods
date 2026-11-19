@@ -1,0 +1,51 @@
+name: Publish mod packages (2026-11-19 r1)
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-2026-11-19-r1.yml']
+
+permissions: {}
+concurrency:
+  group: publish-melvor-mods-2026-11-19-r1
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: 'release-2026-11-19-r1'
+    steps:
+      - name: Verify the original translation and revised speed package; publish once
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo_url="https://github.com/$GITHUB_REPOSITORY.git"
+          git init --quiet source
+          git -C source fetch --quiet --depth=1 "$repo_url" "$GITHUB_SHA"
+          git -C source checkout --quiet --detach FETCH_HEAD
+          cd source/downloads
+          zh='MelvorIdle2_EA_简体中文汉化_v0.6.12.zip'
+          speed='MelvorIdle2_加速Mod_v0.3.11_EA离线调试版_r1.zip'
+          printf '%s  %s\n' '5d58ec84094d481875d642b305fa353173105429572c9748bb236c1b4480fc04' "$zh" '3d81038c28b53e686b15ec7d9643ec939f14ca87fc9cc0a6346bec5d68a59e36' "$speed" | sha256sum --check --strict -
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'This release already exists. Leaving it unchanged.'
+            exit 0
+          fi
+          if test -n "$(git ls-remote --tags "$repo_url" "refs/tags/$TAG")"; then
+            echo 'A tag already exists without this release. Refusing to alter it.' >&2
+            exit 1
+          fi
+          cp -- "$zh" MelvorIdle2-zhCN-v0.6.12.zip
+          cp -- "$speed" MelvorIdle2-Speed-v0.3.11-r1.zip
+          gh release create "$TAG" \
+            'MelvorIdle2-zhCN-v0.6.12.zip#简体中文汉化 v0.6.12 (ZIP)' \
+            'MelvorIdle2-Speed-v0.3.11-r1.zip#加速 MOD v0.3.11 EA 离线调试版 (ZIP)' \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
+            --title '简体中文汉化 v0.6.12 / 加速 MOD v0.3.11（r1）' \
+            --notes 'Windows Steam 抢先体验版，适配 0.11.6-alpha.1 / Build 26724394。加速包的打包修订 r1 只更新包内 NOTICE.txt；MOD 运行文件和安装脚本均未改变，已安装这两版的玩家不需要重装。汉化包与上一版相同。'
