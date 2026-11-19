@@ -1,0 +1,52 @@
+name: Publish the verified 2026-11-19 mod packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-2026-11-19.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: publish-melvor-mods-2026-11-19
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      MODS_COMMIT: 'b4c312d5328c53da9a46d6361795449f1b0588a4'
+      RELEASE_TAG: 'release-2026-11-19'
+    steps:
+      - name: Check package hashes and publish the two ZIPs
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo_url="https://github.com/$GITHUB_REPOSITORY.git"
+          git init --quiet source
+          git -C source fetch --quiet --depth=1 "$repo_url" "$MODS_COMMIT"
+          git -C source checkout --quiet --detach FETCH_HEAD
+          cd source/downloads
+          sha256sum --check --strict SHA256SUMS.txt
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists; leaving it unchanged."
+            exit 0
+          fi
+          existing_tag="$(git ls-remote --tags "$repo_url" "refs/tags/$RELEASE_TAG")"
+          if test -n "$existing_tag"; then
+            echo "A tag already exists without this release. Refusing to alter it." >&2
+            exit 1
+          fi
+          gh release create "$RELEASE_TAG" \
+            'MelvorIdle2_EA_简体中文汉化_v0.6.12.zip#简体中文汉化 v0.6.12 (ZIP)' \
+            'MelvorIdle2_加速Mod_v0.3.11_EA离线调试版.zip#加速 MOD v0.3.11 EA 离线调试版 (ZIP)' \
+            --repo "$GITHUB_REPOSITORY" --target "$MODS_COMMIT" \
+            --title '简体中文汉化 v0.6.12 / 加速 MOD v0.3.11' \
+            --notes '两个独立的 Windows Steam EA 安装包，适配 Melvor Idle 2 0.11.6-alpha.1 / Build 26724394；不适用于独立 Demo。解压后按各自说明安装，升级或安装前请备份存档。安装、卸载与测试范围请见仓库 README。'
