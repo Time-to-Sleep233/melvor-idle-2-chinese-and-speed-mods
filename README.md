@@ -4,11 +4,11 @@
 
 ## 下载
 
-**[前往 GitHub Release 下载两个 MOD](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19)**。在 Assets 中点带中文名称的 ZIP；下面的仓库直链保留原始中文文件名。
+**[前往最新正式发行（Release）](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/latest)** · [本页对应的 2026-11-19 版本](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19)。在 Assets 中按中文标签和版本选择；GitHub 可能会把下载文件名中的部分中文替换成标点。下面是保留完整中文文件名的本版直链。
 
-- [下载简体中文汉化 v0.6.12](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/main/downloads/MelvorIdle2_EA_%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96_v0.6.12.zip)（324,835 字节）
-- [下载加速 MOD v0.3.11 · EA 离线调试版](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/main/downloads/MelvorIdle2_%E5%8A%A0%E9%80%9FMod_v0.3.11_EA%E7%A6%BB%E7%BA%BF%E8%B0%83%E8%AF%95%E7%89%88.zip)（2,324,317 字节）
-- [SHA-256 校验值](downloads/SHA256SUMS.txt) · 在 PowerShell 中用 `Get-FileHash -Algorithm SHA256 -LiteralPath '压缩包完整路径'` 核对。
+- [下载简体中文汉化 v0.6.12](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/b4c312d5328c53da9a46d6361795449f1b0588a4/downloads/MelvorIdle2_EA_%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96_v0.6.12.zip)（324,835 字节）
+- [下载加速 MOD v0.3.11 · EA 离线调试版](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/b4c312d5328c53da9a46d6361795449f1b0588a4/downloads/MelvorIdle2_%E5%8A%A0%E9%80%9FMod_v0.3.11_EA%E7%A6%BB%E7%BA%BF%E8%B0%83%E8%AF%95%E7%89%88.zip)（2,324,317 字节）
+- [本版 SHA-256 校验值](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/blob/b4c312d5328c53da9a46d6361795449f1b0588a4/downloads/SHA256SUMS.txt) · 在 PowerShell 中用 `Get-FileHash -Algorithm SHA256 -LiteralPath '压缩包完整路径'` 核对。
 
 请选择对应的 MOD ZIP，不要把 GitHub 的仓库源码压缩包当作安装包。
 
@@ -29,5 +29,9 @@
 4. 从 Steam 启动游戏。要移除某个 MOD，退出游戏后运行**该 MOD** 文件夹里的 `一键卸载.bat`。
 
 离线加速部分使用针对特定版本的 DLL 差分，不是完整 DLL。只有原始文件精确匹配时才应应用；请保留安装器建立的原版备份。安装和回滚、部分游戏场景已做隔离测试；没有用真实角色存档验证离线收益。
+
+## 遇到问题
+
+如果安装检查报告游戏版本或 DLL 不匹配，请停止安装，不要手动覆盖 DLL。遇到误译、加速异常或安装失败，可以[提交问题反馈](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/issues/new?template=mod-report.yml)。请写明游戏和 MOD 的版本、问题发生在哪一步；公开反馈不需要附存档或账号信息。
 
 本项目与 Games by Malcs、Jagex 或 Steam 无隶属关系。游戏及第三方素材的权利归各自权利人；本仓库未为这些内容授予开源许可。

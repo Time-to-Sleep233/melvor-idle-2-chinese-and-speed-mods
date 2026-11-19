@@ -1,0 +1,44 @@
+name: MOD 问题反馈
+description: 反馈汉化、加速或安装问题
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先确认你使用的是 **Windows Steam 抢先体验版（EA）**，不是独立 Demo。问题会公开显示，请不要上传存档、账号信息或带有个人路径的完整日志。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 哪一部分出问题？
+      options:
+        - 汉化文本或界面
+        - 游戏内加速
+        - 离线跟随
+        - 安装、检查或卸载
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: 游戏与 MOD 版本
+      description: 写出游戏版本或 Steam Build ID，以及已安装的 MOD 版本；找不到的项可填“不清楚”。
+      placeholder: "例如：0.11.6-alpha.1 / Build 26724394；汉化 v0.6.12，加速 v0.3.11"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 发生了什么？怎样重现？
+      description: 写出操作、实际结果和预期结果。若为误译，请附界面位置、当前显示的文字和建议译法。
+      placeholder: |
+        位置或操作：
+        实际结果：
+        预期结果：
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 可选补充
+      description: 可贴已隐去个人信息的错误提示、相关界面截图，或列出同时启用的其他 MOD。不要附完整存档。
