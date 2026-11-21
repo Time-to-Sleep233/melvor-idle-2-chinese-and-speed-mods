@@ -1,0 +1,55 @@
+name: Publish Simplified Chinese v0.6.13
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-2026-11-21-zhcn-v0.6.13.yml']
+
+permissions: {}
+concurrency:
+  group: publish-melvor-zhcn-v0-6-13
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: 'release-2026-11-21-zhcn-v0.6.13'
+      ASSET: 'MelvorIdle2-zhCN-v0.6.13-guild-wrap.zip'
+    steps:
+      - name: Verify package and create the new release
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo_url="https://github.com/$GITHUB_REPOSITORY.git"
+          git init --quiet source
+          git -C source fetch --quiet --depth=1 "$repo_url" "$GITHUB_SHA"
+          git -C source checkout --quiet --detach FETCH_HEAD
+          cd source/downloads
+          printf '%s  %s\n' '47114873336ddde00b10ead1793d344262a466ec0339b46b9e7bc66db0685251' "$ASSET" | sha256sum --check --strict -
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'A release already exists. Refusing to alter it.' >&2
+            exit 1
+          fi
+          existing_tag="$(git ls-remote --tags "$repo_url" "refs/tags/$TAG")"
+          if test -n "$existing_tag"; then
+            echo 'A tag already exists. Refusing to alter it.' >&2
+            exit 1
+          fi
+          cat > "$RUNNER_TEMP/melvor-zhcn-release.md" <<'MELVOR_NOTES'
+          修复精通公会解锁奖励的中文长说明被截断。较长条目现在会在列表内自动换行，例如星象学达到熟练占星师的奖励。奖励效果、原有译文和加速 MOD 不变。
+
+          适用 Windows Steam 抢先体验版 `0.11.6-alpha.1`（Build `26724394`），不适用于独立 Demo。
+
+          退出游戏，完整解压 ZIP，运行 `一键安装.bat` 和 `安装检查.bat`。本次已通过隔离界面场景和安装校验，未用真实角色存档测试。
+
+          加速 MOD 请前往[原 v0.3.11 r1 Release](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19-r1)。
+          MELVOR_NOTES
+          gh release create "$TAG" "$ASSET#简体中文汉化 v0.6.13 (ZIP)" \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
+            --title '简体中文汉化 v0.6.13' --notes-file "$RUNNER_TEMP/melvor-zhcn-release.md"

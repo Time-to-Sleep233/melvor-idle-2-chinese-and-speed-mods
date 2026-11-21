@@ -4,16 +4,16 @@
 
 ## 下载
 
-- [下载简体中文汉化 v0.6.12](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/b4c312d5328c53da9a46d6361795449f1b0588a4/downloads/MelvorIdle2_EA_%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96_v0.6.12.zip)
-- [下载加速 MOD v0.3.11 · EA 离线调试版](https://raw.githubusercontent.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/main/downloads/MelvorIdle2_%E5%8A%A0%E9%80%9FMod_v0.3.11_EA%E7%A6%BB%E7%BA%BF%E8%B0%83%E8%AF%95%E7%89%88_r1.zip)
+- [下载简体中文汉化 v0.6.13](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-21-zhcn-v0.6.13/MelvorIdle2-zhCN-v0.6.13-guild-wrap.zip)
+- [下载加速 MOD v0.3.11 · EA 离线调试版](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-19-r1/MelvorIdle2-Speed-v0.3.11-r1.zip)
 
-也可以在[最新 Release](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/latest) 的 **Assets** 中按中文标签选择。请下载 MOD 安装包，不要下载 GitHub 自动生成的源码压缩包。
+也可分别查看[汉化发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-21-zhcn-v0.6.13)与[加速 MOD 发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19-r1)。请下载 MOD 安装包，不要下载 GitHub 自动生成的源码压缩包。
 
 ## 版本与用途
 
 | MOD | 版本 | 功能 |
 | --- | --- | --- |
-| 简体中文汉化 | v0.6.12 | 在已有中文词条的基础上补译、校对界面与文本，例如按上下文区分天气里的“晴天”和清除操作。 |
+| 简体中文汉化 | v0.6.13 | 在已有中文词条的基础上补译、校对。本版修复精通公会解锁奖励的中文长说明被截断。 |
 | 加速 MOD（EA 离线调试版） | v0.3.11 | F8 切换游戏倍率，F9 显示或隐藏加速控件；只有在支持的离线补丁生效时，F7 才能切换离线跟随。 |
 
 适配版本为 `0.11.6-alpha.1`（Steam Build `26724394`）。EA 更新可能改变兼容性，不要在版本不匹配时强行安装离线差分。
