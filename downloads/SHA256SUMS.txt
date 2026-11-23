@@ -2,3 +2,4 @@
 508de0151fbf28627e20c439b3c391eebc9068acebd30646a9b26f14374b09e0  MelvorIdle2_加速Mod_v0.3.11_EA离线调试版.zip
 3d81038c28b53e686b15ec7d9643ec939f14ca87fc9cc0a6346bec5d68a59e36  MelvorIdle2_加速Mod_v0.3.11_EA离线调试版_r1.zip
 47114873336ddde00b10ead1793d344262a466ec0339b46b9e7bc66db0685251  MelvorIdle2-zhCN-v0.6.13-guild-wrap.zip
+dd64a4ca18f0e84af641ac054a0c36fe2b4ba3029d160e37c9e6964fefdda289  MelvorIdle2-zhCN-v0.6.14-footer-countdown.zip

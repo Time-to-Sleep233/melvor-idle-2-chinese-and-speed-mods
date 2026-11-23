@@ -4,16 +4,16 @@
 
 ## 下载
 
-- [下载简体中文汉化 v0.6.13](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-21-zhcn-v0.6.13/MelvorIdle2-zhCN-v0.6.13-guild-wrap.zip)
+- [下载简体中文汉化 v0.6.14](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-23-zhcn-v0.6.14/MelvorIdle2-zhCN-v0.6.14-footer-countdown.zip)
 - [下载加速 MOD v0.3.11 · EA 离线调试版](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-19-r1/MelvorIdle2-Speed-v0.3.11-r1.zip)
 
-也可分别查看[汉化发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-21-zhcn-v0.6.13)与[加速 MOD 发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19-r1)。请下载 MOD 安装包，不要下载 GitHub 自动生成的源码压缩包。
+也可分别查看[汉化发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-23-zhcn-v0.6.14)与[加速 MOD 发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19-r1)。请下载 MOD 安装包，不要下载 GitHub 自动生成的源码压缩包。
 
 ## 版本与用途
 
 | MOD | 版本 | 功能 |
 | --- | --- | --- |
-| 简体中文汉化 | v0.6.13 | 在已有中文词条的基础上补译、校对。本版修复精通公会解锁奖励的中文长说明被截断。 |
+| 简体中文汉化 | v0.6.14 | 在已有中文词条的基础上补译、校对。本版修复底部升级倒计时更新时引起的界面伸缩，保留中文时间单位。 |
 | 加速 MOD（EA 离线调试版） | v0.3.11 | F8 切换游戏倍率，F9 显示或隐藏加速控件；只有在支持的离线补丁生效时，F7 才能切换离线跟随。 |
 
 适配版本为 `0.11.6-alpha.1`（Steam Build `26724394`）。EA 更新可能改变兼容性，不要在版本不匹配时强行安装离线差分。
