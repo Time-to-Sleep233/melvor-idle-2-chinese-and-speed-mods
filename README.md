@@ -5,18 +5,18 @@
 ## 下载
 
 - [下载简体中文汉化 v0.6.14](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-23-zhcn-v0.6.14/MelvorIdle2-zhCN-v0.6.14-footer-countdown.zip)
-- [下载加速 MOD v0.3.11 · EA 离线调试版](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/download/release-2026-11-19-r1/MelvorIdle2-Speed-v0.3.11-r1.zip)
+- [下载加速 MOD v0.3.14](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/raw/64d2f3e1980644943c2124c715829ffc58d30509/downloads/MelvorIdle2-Speed-v0.3.14-EA-0.11.7.zip)
 
-也可分别查看[汉化发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-23-zhcn-v0.6.14)与[加速 MOD 发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19-r1)。请下载 MOD 安装包，不要下载 GitHub 自动生成的源码压缩包。
+也可分别查看[汉化发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-23-zhcn-v0.6.14)与[旧版加速 MOD 发布页](https://github.com/Time-to-Sleep233/melvor-idle-2-chinese-and-speed-mods/releases/tag/release-2026-11-19-r1)。请下载 MOD 安装包，不要下载 GitHub 自动生成的源码压缩包。
 
 ## 版本与用途
 
-| MOD | 版本 | 功能 |
-| --- | --- | --- |
-| 简体中文汉化 | v0.6.14 | 在已有中文词条的基础上补译、校对。本版修复底部升级倒计时更新时引起的界面伸缩，保留中文时间单位。 |
-| 加速 MOD（EA 离线调试版） | v0.3.11 | F8 切换游戏倍率，F9 显示或隐藏加速控件；只有在支持的离线补丁生效时，F7 才能切换离线跟随。 |
+| MOD | 版本 | Steam 游戏版本 | 功能 |
+| --- | --- | --- | --- |
+| 简体中文汉化 | v0.6.14 | `0.11.6-alpha.1` / Build `26724394` | 在已有中文词条的基础上补译、校对。本版修复底部升级倒计时更新时引起的界面伸缩，保留中文时间单位。 |
+| 加速 MOD | v0.3.14 | `0.11.7-alpha` / Build `26886380` | 右上角同一面板显示倍速和离线上限，左键可分别切换。F8 切换倍速，F9 显示或隐藏面板。 |
 
-适配版本为 `0.11.6-alpha.1`（Steam Build `26724394`）。EA 更新可能改变兼容性，不要在版本不匹配时强行安装离线差分。
+离线补丁生效时，左键点「离线上限」可选择原版（基础 24 小时）、48 小时或 72 小时（默认），保留更高的原生上限。F7 独立控制是否沿用上次退出的倍速。EA 更新可能改变兼容性，不要在版本不匹配时强行安装离线差分。
 
 ## 安装与卸载
 
@@ -25,7 +25,7 @@
 3. 在要安装的 MOD 文件夹内运行 `一键安装.bat`，再运行同一文件夹中的 `安装检查.bat`。要同时使用两个 MOD，就分别执行一次。
 4. 从 Steam 启动游戏。要移除某个 MOD，退出游戏后运行**该 MOD** 文件夹里的 `一键卸载.bat`。
 
-离线加速使用针对特定版本的 DLL 差分，只有原始文件精确匹配时才应应用；请保留安装器建立的原版备份。首次试用离线跟随时，先进入角色、选择倍率、正常退出，再回到同一角色。安装和回滚、部分游戏场景已做隔离测试；没有用真实角色存档验证离线收益。
+离线加速使用针对特定版本的 DLL 差分，只有原始文件精确匹配时才应应用；请保留安装器建立的原版备份。首次试用离线跟随时，先进入角色、选择倍率、正常退出，再回到同一角色。安装、回滚和三个上限档位已做隔离测试；已通过真实读档日志确认 50× 的离线结算时长，未逐项核验角色收益。
 
 ## 遇到问题
 
